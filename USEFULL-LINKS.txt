@@ -1,0 +1,18 @@
+http://longbets.org/rules/
+
+https://laravel.com/
+
+https://habr.com/ru/post/502058/
+https://laravel.demiart.ru/laravel-7-whats-new/
+https://sergeymukhin.com/blog/chto-novogo-v-laravel-70
+----
+https://laravel.demiart.ru/blade-a-directive-for-a-selected-option-of-a-list/
+----
+//https://blog.denisbondar.com/post/phpstorm_docker_xdebug
+---------
+календарь для тектовго поля даты  https://itchief.ru/lessons/bootstrap-3/113-bootstrap-3-datetimepicker
+---
+       https://stackoverflow.com/questions/42417865/how-to-return-view-with-flash-message !!!!!
+--------
+Events
+https://code.tutsplus.com/ru/tutorials/custom-events-in-laravel--cms-30331
