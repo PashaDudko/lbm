@@ -27,9 +27,9 @@ class SendNotificationAboutFirstBetInWager
     public function handle(WagerHasFirstBet $event)
     {
         try {
-            $fd = fopen('wager_has_first_bet.txt', 'a+');
+            $fd = fopen('../wager_has_first_bet.txt', 'a+');
             $str = "Congratulations, your wager: " . $event->wager->condition .
-                    "is fully activated by user" . $event->wager->user['name'] .
+                    " was fully activated by user" . /*$event->wager->user['name']*/ $event->user['name'].
                     " at " . $event->wager->updated_at . "\n";
             fwrite($fd, $str);
             fclose($fd);
