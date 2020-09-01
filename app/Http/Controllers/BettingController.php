@@ -40,31 +40,17 @@ class BettingController
 
         $betsQuantity = Bet::where('wager_id', '=', $wager->id)->get()->count(); // вопрос по mysql: чем больше уловий в WHERE , тем бытсрее выполнитья запрос?
 
-//        if (1 == $betsQuantity) {
+        if (1 == $betsQuantity) {
             $wager->first_bet_at_allotted_time = true;
             $wager->save();
-//            event(new WagerHasFirstBet($wager));
-            try {
-//                dump('kdkd1');
-                $fd = fopen('wager_has_first_bet.txt', 'a+');
-//                dd($fd);
-                $str = "Congratulations, your wager: " . $wager->condition .
-                    "is fully activated by user" . "Abc" .
-                    " at " . $wager->updated_at . "\n";
-                dump(fwrite($fd, $str, 35));
+            event(new WagerHasFirstBet($wager));
+        }
 
-                dump(fclose($fd));
-                dump('kdkd123000');
-            } catch (\Exception $e) {
-                dd($e->getMessage());
-            }
-//        }
-
-/*        return view('betting.wager')->with([
+        return view('betting.wager')->with([
             'wager' => $wager,
             'options' => $wager->options,
             'betWasPlaced' => true,
-        ]);*/
+        ]);
     }
 
 /*    public function formComment(Wager $wager)
