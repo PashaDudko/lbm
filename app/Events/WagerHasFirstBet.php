@@ -24,7 +24,7 @@ class WagerHasFirstBet
      *
      * @return void
      */
-    public function __construct(Wager $wager) //User $user
+    public function __construct(Wager $wager) //, User $user
     {
         $this->wager = $wager;
         //$this->user = $user; // должен приходить юзер, который проголосовал в мейджере
